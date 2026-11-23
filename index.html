@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Shuttle Trap – AI Badminton</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div><div class="eye">AI LAB PROJECT • GAME DEMO</div><h1>THE SHUTTLE TRAP</h1></div>
+    <div class="score"><span class="sy">YOU <b id="s0">0</b></span><span class="sa">AI <b id="s1">0</b></span></div>
+  </header>
+  <main>
+    <section class="left">
+      <div id="stage"><canvas id="cv"></canvas><div id="banner"></div></div>
+      <div class="bars">
+        <div class="st">YOU · stamina <b id="v0">100</b>%<div class="bar"><i id="b0" style="background:var(--lime)"></i></div></div>
+        <div class="st">AI · stamina <b id="v1">100</b>% · RALLY <b id="rl">0</b><div class="bar"><i id="b1" style="background:var(--org)"></i></div></div>
+      </div>
+      <div id="status"></div>
+      <div id="shots"></div>
+      <button class="btn" id="serve">SERVE DIAGONALLY</button>
+      <p class="hint">Your player moves automatically. When the shuttle is reachable, tap the <b class="o">opponent's court</b> to place your shot, then choose <b class="l">Clear · Drop · Smash · Net</b>.</p>
+    </section>
+    <section class="right">
+      <div class="card"><h3>AI PREDICTION</h3><div id="pred"></div><div id="coach"></div></div>
+      <div class="card"><h3>OPPONENT MODEL · WHAT THE AI LEARNED ABOUT YOU</h3><div id="tend"></div></div>
+      <div class="card"><h3>AI OPPONENT STRATEGY</h3>
+        <div class="seg"><button data-m="greedy">Greedy Best-First</button><button data-m="hill" class="on">Hill Climbing</button></div></div>
+      <div class="card"><h3>AI BRAIN · LIVE LOG</h3><div id="brain"></div></div>
+      <button class="btn" id="newgame">New match</button>
+    </section>
+  </main>
+</div>
+<script src="js/config.js"></script>
+<script src="js/astar.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/game.js"></script>
+<script src="js/render.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
